@@ -16,8 +16,10 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    max-width: 20rem;
-    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 80rem; */
+    /* margin: 0 auto; */
     padding: 3rem;
 }
 
@@ -29,7 +31,7 @@ body{
     margin: 2rem 0;
     display: flex;
     align-items: center;
-    color: hsl(232, 13%, 33%);
+    color: hsl(234, 14%, 74%);
     font-size: 0.8rem;
 }
 
@@ -68,13 +70,84 @@ body{
     width: 20px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: #fff;
     border-radius: 50px;
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
 }
+input:active + .toggle-slider {
+    opacity: 0.5;
+   }
 input:checked + .toggle-slider:before {
     -webkit-transform: translateX(18px);
     -ms-transform: translateX(18px);
     transform: translateX(18px);
+}
+.plans-container{
+    display: flex;
+}
+.plans-container > div{
+    flex: 1;
+}
+.plan{
+    background-color: #fff;
+    padding: 2rem 4rem;
+    border-radius: 0.5rem;
+    box-shadow: 1rem 1rem 2rem hsla(232, 13%, 33%, 0.1), -1rem 0 2rem hsla(232, 13%, 33%, 0.1);
+    text-align: center;
+    /* position: relative; */
+}
+
+.plan-title{
+    color: hsl(233, 13%, 49%);
+    font-size: 1rem;
+}
+
+.plan-price{
+    color: hsl(232, 13%, 33%);
+    font-size: 3.2rem;
+    margin: 1.2rem 0;
+    /* display: inline-block; */
+}
+.plan-price span{
+    font-size: 1.8rem;
+    position: relative;
+    top: -0.3rem;
+    margin-right: 0.3rem;
+    /* left: 7.5rem; */
+    /* vertical-align: middle; */
+}
+.plan-features{
+    list-style: none;
+    color: hsl(233, 13%, 49%);
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.plan-features li{
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+    padding: 1rem 0;
+    border-top: 1.2px solid hsla(234, 14%, 74%, 0.3);
+
+}
+.plan-features li:last-child{
+    border-bottom: 1.2px solid hsla(234, 14%, 74%, 0.3);
+}
+
+.feature-btn{
+    font: inherit;
+    font-size: 0.7rem;
+    letter-spacing: 0.2rem;
+    color: #fff;
+    background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+    width: calc(100% + 5rem);
+    padding: 0.7rem;
+    text-transform: uppercase;
+
 }
