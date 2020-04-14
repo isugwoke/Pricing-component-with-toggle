@@ -7,9 +7,30 @@
 }
 
 body{
+    background-color: hsl(240, 78%, 98%);
     font-family: 'Montserrat', sans-serif;
-    /* font-weight: 700; */
+    font-weight: 700;
 
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 20rem;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+.pricing{
+    color: hsl(233, 13%, 49%);
+    font-size: 1.6rem;
+}
+.toggle-container{
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    color: hsl(232, 13%, 33%);
+    font-size: 0.8rem;
 }
 
 /* Toggle button */
@@ -18,6 +39,7 @@ body{
     display: inline-block;
     width: 46px;
     height: 27px;
+    margin: 0 1rem;
 }
 
 .toggle-btn input { 
@@ -51,15 +73,6 @@ body{
     -webkit-transition: .4s;
     transition: .4s;
 }
-
-input:checked + .toggle-slider {
-    /* background-color: #2196F3; */
-}
-
-input:focus + .toggle-slider {
- /* box-shadow: 0 0 1px #2196F3; */
-}
-
 input:checked + .toggle-slider:before {
     -webkit-transform: translateX(18px);
     -ms-transform: translateX(18px);
