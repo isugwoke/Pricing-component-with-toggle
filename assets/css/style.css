@@ -10,26 +10,24 @@ body{
     background-color: hsl(240, 78%, 98%);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-
 }
 
 .container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* max-width: 80rem; */
-    /* margin: 0 auto; */
+    max-width: 1000px;
     padding: 3rem;
+    margin: 0 auto;
 }
-
 .pricing{
     color: hsl(233, 13%, 49%);
     font-size: 1.6rem;
+    text-align: center;
 }
 .toggle-container{
     margin: 2rem 0;
     display: flex;
+    justify-content: center;
     align-items: center;
     color: hsl(234, 14%, 74%);
     font-size: 0.8rem;
@@ -85,17 +83,15 @@ input:checked + .toggle-slider:before {
 }
 .plans-container{
     display: flex;
-}
-.plans-container > div{
-    flex: 1;
+    align-items: center;
 }
 .plan{
     background-color: #fff;
-    padding: 2rem 4rem;
+    padding: 2rem 1rem;
     border-radius: 0.5rem;
     box-shadow: 1rem 1rem 2rem hsla(232, 13%, 33%, 0.1), -1rem 0 2rem hsla(232, 13%, 33%, 0.1);
     text-align: center;
-    /* position: relative; */
+    width: 32%;
 }
 
 .plan-title{
@@ -107,15 +103,13 @@ input:checked + .toggle-slider:before {
     color: hsl(232, 13%, 33%);
     font-size: 3.2rem;
     margin: 1.2rem 0;
-    /* display: inline-block; */
+    text-align: center;
 }
 .plan-price span{
     font-size: 1.8rem;
     position: relative;
     top: -0.3rem;
-    margin-right: 0.3rem;
-    /* left: 7.5rem; */
-    /* vertical-align: middle; */
+    margin-right: 0.3rem; 
 }
 .plan-features{
     list-style: none;
@@ -125,9 +119,7 @@ input:checked + .toggle-slider:before {
 }
 
 .plan-features li{
-    margin-left: -2.5rem;
-    margin-right: -2.5rem;
-    padding: 1rem 0;
+    padding: 0.8rem 0;
     border-top: 1.2px solid hsla(234, 14%, 74%, 0.3);
 
 }
@@ -144,10 +136,63 @@ input:checked + .toggle-slider:before {
     outline: none;
     border: none;
     border-radius: 0.3rem;
-    margin-left: -2.5rem;
-    margin-right: -2.5rem;
-    width: calc(100% + 5rem);
+    width: 100%;
     padding: 0.7rem;
     text-transform: uppercase;
+    cursor: pointer;
 
+}
+
+.feature-btn:hover{
+    background: transparent;
+    border: 1.4px solid hsl(237, 63%, 64%);
+    color: hsl(237, 63%, 64%);
+}
+
+.basic{
+    margin-right: -0.3rem;
+}
+
+.pro{
+    background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    padding: 3rem 1rem;
+    z-index: 1;
+
+}
+
+.pro *{
+    color:#fff;
+}
+
+.pro li{
+    border-color: hsla(234, 14%, 74%, 0.6);
+}
+.pro .feature-btn{
+    background: #fff;
+    color: hsl(237, 63%, 64%);
+}
+
+.pro .feature-btn:hover{
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+.master{
+    margin-left: -0.3rem;
+}
+
+@media only screen and (max-width: 760px){
+    .container{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 5rem;
+    }
+    .plans-container{
+        flex-direction: column;
+    }
+
+    .plan{
+        width: 100%;
+        margin-top: 1.5rem;
+    }
 }
