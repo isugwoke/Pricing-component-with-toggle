@@ -98,18 +98,17 @@ input:checked + .toggle-slider:before {
     color: hsl(233, 13%, 49%);
     font-size: 1rem;
 }
-
-.plan-price{
+.plan-price {
     color: hsl(232, 13%, 33%);
-    font-size: 3.2rem;
-    margin: 1.2rem 0;
+    font-size: 1.8rem;
+    margin: 1rem 0;
     text-align: center;
 }
 .plan-price span{
-    font-size: 1.8rem;
+    font-size: 3.2rem;
     position: relative;
-    top: -0.3rem;
-    margin-right: 0.3rem; 
+    top: 0.3rem;
+    margin-left: 0.3rem;
 }
 .plan-features{
     list-style: none;
@@ -181,7 +180,7 @@ input:checked + .toggle-slider:before {
     margin-left: -0.3rem;
 }
 
-@media only screen and (max-width: 760px){
+@media only screen and (max-width: 768px){
     .container{
         padding-left: 1rem;
         padding-right: 1rem;
