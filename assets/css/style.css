@@ -108,7 +108,7 @@ input:checked + .toggle-slider:before {
 .plan-price span{
     font-size: 3.2rem;
     position: relative;
-    top: 0.3rem;
+    top: 0.4rem;
     margin-left: 0.3rem;
 }
 
