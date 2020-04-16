@@ -1,4 +1,6 @@
 const checkbox = document.querySelector('.checkbox');
+const prices = document.querySelectorAll('.plan-price');
+// const proPlan = document.querySelectorAll()
 
 // Plans
 const plan = {
@@ -15,15 +17,23 @@ const plan = {
 };
 
 const setPlan = planType => {
-    const basicPrice = document.querySelector('.basic span');
-    const proPrice = document.querySelector('.pro span');
-    const masterPrice = document.querySelector('.master span');
+    // set Plan Prices
+    document.querySelector('.basic span').innerText = planType.basic;
+    document.querySelector('.pro span').innerText = planType.pro;
+    document.querySelector('.master span').innerText = planType.master;
+}
 
-    basicPrice.innerText = planType.basic;
-    proPrice.innerText = planType.pro;
-    masterPrice.innerText = planType.master;
+const animate = () => {
+    prices.forEach(price => {
+        price.classList.add('animate');
+        setTimeout(function(){
+            price.classList.remove('animate');
+        }, 200);
+    });
 }
 
 checkbox.addEventListener('change', () => {
     checkbox.checked ? setPlan(plan.monthly) : setPlan(plan.annual);
+    // Animate
+    animate();
 });

@@ -92,6 +92,7 @@ input:checked + .toggle-slider:before {
     box-shadow: 1rem 1rem 2rem hsla(232, 13%, 33%, 0.1), -1rem 0 2rem hsla(232, 13%, 33%, 0.1);
     text-align: center;
     width: 32%;
+    max-height: 373px;
 }
 
 .plan-title{
@@ -109,6 +110,23 @@ input:checked + .toggle-slider:before {
     position: relative;
     top: 0.3rem;
     margin-left: 0.3rem;
+}
+
+.animate{
+    animation: 0.5s flip;
+}
+
+@keyframes flip {
+    from{
+        /* transform: translateY(-100px);  */
+        /* transition:transform 0.8s; */
+        transform-style: preserve-3d; 
+    }
+
+    to{
+        transform: rotateY(360deg);
+
+    }
 }
 .plan-features{
     list-style: none;
@@ -154,8 +172,10 @@ input:checked + .toggle-slider:before {
 
 .pro{
     background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    max-height: 405px;
     padding: 3rem 1rem;
     z-index: 1;
+
 
 }
 
